@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spark Study AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spark Study AI - Take a picture of your homework and get hints and step-by-step AI explanations.">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4a00e0, #8e2de2);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #4a00e0;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3700b3;
+        }
+
+        #preview {
+            max-width: 100%;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        #output {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>✨ Spark Study AI</h1>
+<p>Snap your homework. Get hints. Learn step-by-step.</p>
+
+<div class="card">
+
+    <input type="file" accept="image/*" capture="environment" id="cameraInput">
+
+    <img id="preview">
+
+    <br>
+    <button onclick="analyzeHomework()">Analyze Homework</button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+const cameraInput = document.getElementById("cameraInput");
+const preview = document.getElementById("preview");
+const output = document.getElementById("output");
+
+cameraInput.addEventListener("change", function() {
+    const file = cameraInput.files[0];
+    if(file) {
+        preview.src = URL.createObjectURL(file);
+    }
+});
+
+function analyzeHomework() {
+
+    output.innerHTML = "🤖 Reading your homework...";
+
+    setTimeout(() => {
+
+        output.innerHTML = `
+        <h3>💡 Hint:</h3>
+        <p>Try breaking the question into smaller parts first.</p>
+
+        <h3>📖 Step-by-Step Explanation:</h3>
+        <p>Step 1: Understand what the question is asking.<br>
+        Step 2: Identify the formula or rule needed.<br>
+        Step 3: Solve carefully step by step.<br>
+        Step 4: Double-check your answer.</p>
+
+        <h3>✅ Final Answer:</h3>
+        <p>(Real AI answer will appear here once connected.)</p>
+        `;
+
+    }, 2000);
+}
+
+</script>
+
+</body>
+  </html>
