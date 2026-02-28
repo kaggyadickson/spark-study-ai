@@ -5,24 +5,24 @@ Spark Study AI is a smart AI-powered homework assistant for Primary and Secondar
 ## 📸 How It Works
 1. Take a picture of your homework.
 2. The AI reads the questions.
-3. Get helpful hints first.
+3. Then get direct answers
 4. Then receive step-by-step explanations.
 5. Learn smarter, not just faster.
 
 ## 🎯 Features
 - Image homework upload
-- AI-generated hints
+
 - Step-by-step explanations
 - Clean mobile-friendly interface
 - Built for students worldwide
 
 ## 🚀 Vision
 Spark Study AI is designed to make learning easier, smarter, and more interactive.  
-The goal is to help students understand concepts instead of just copying answers.
+The goal is to help students get answers to their questions 
 
 ## 🌍 Live Demo
 [Visit Spark Study AI](https://yourusername.github.io/spark-study-ai/)
 
 ---
 
-Built with ❤️ by Umar
+Built by Umar
